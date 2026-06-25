@@ -1,0 +1,162 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: #0d1117;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+.fondo-pagina {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url('imagenes/fondo2.jpg') center/cover;
+    filter: brightness(0.2) blur(5px);
+    z-index: -1;
+}
+.navbar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    width: 100%; 
+}
+.logo-circulo {
+    width: 60px; 
+    height: 60px;
+    border: 1px solid #d1b3ff;
+    border-radius: 50%;
+    overflow: hidden; 
+    box-shadow: 0 0 10px #d1b3ff;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    margin-right: auto;
+}
+.logo-enlace {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 999;;
+}
+.imagen-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+.hamburger { cursor: pointer; z-index: 101; }
+.hamburger input { display: none; }
+.hamburger svg { height: 3em; transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1); }
+.line { fill: none; stroke: white; stroke-linecap: round; stroke-width: 3; transition: 600ms; }
+.line-top-bottom { stroke-dasharray: 12 63; }
+.hamburger input:checked + svg { transform: rotate(-45deg); }
+.hamburger input:checked + svg .line-top-bottom { stroke-dasharray: 20 300; stroke-dashoffset: -32.42; }
+.menu-lateral {
+    position: absolute; top: 100px; right: 50px;
+    background: #0d1117; border: 1px solid #30363d;
+    display: none; flex-direction: column; width: 200px;
+    border-radius: 6px; overflow: hidden;
+    z-index: 100;
+}
+.menu-wrapper:has(.hamburger input:checked) .menu-lateral { 
+    display: flex; 
+    animation: slideDown 0.3s ease; 
+}
+.menu-btn {
+    background: transparent; border: none; color: #c9d1d9;
+    padding: 12px; text-align: left; cursor: pointer; transition: 0.2s;
+}
+.menu-btn:hover { background: #161b22; color: #58a6ff; border-left: 3px solid #58a6ff; }
+@keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+.titulo-principal {
+    font-family: 'Oswald', sans-serif;
+    font-size: 5.5rem; text-align: center;
+    letter-spacing: 12px; margin-top: 10px;
+    color: #fff; text-shadow: 0 0 10px #d1b3ff, 0 0 20px #d1b3ff, 0 0 40px #d1b3ff;
+}
+
+.titulo-neon-azul {
+    font-family: 'Georgia', serif;
+    color: #ffffff;
+    padding-top: 100px;
+    text-shadow: 0 0 8px #0055ff, 
+                 0 0 15px #0077ff, 
+                 0 0 30px #00aaff, 
+                 0 0 45px #00aaff;
+}
+
+.tarjeta-neon-contenedor {
+    background-color: rgba(13, 17, 26, 0.88);
+    border: 2px solid #3377ff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 119, 255, 0.6), 
+                inset 0 0 15px rgba(0, 119, 255, 0.2);
+}
+
+.titulo-contactanos {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+}
+
+.contenedor-mapa-interno iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .contenedor-mapa-interno {
+        border-top-right-radius: 18px;
+        border-bottom-right-radius: 18px;
+        overflow: hidden;
+    }
+    .titulo-principal {
+        font-size: 2.5rem;
+    }
+}
+
+.circulo-logo-neon {
+    width: 130px;
+    height: 130px;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #000000;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 
+                0 0 10px rgba(0, 119, 255, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.opcion-red-social:hover .circulo-logo-neon {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 119, 255, 0.8);
+}
+
+.opcion-red-social p {
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.5px;
+}
+.enlace-sidebar-haiku {
+    font-size: 1.5rem;
+    color: #ffffff;
+    padding: 10px 40px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+    transition: background-color 0.2s;
+}
+.enlace-sidebar-haiku:hover, .enlace-sidebar-haiku.activa {
+    background-color: #3377ff;
+    color: #ffffff;
+    border-color: #3377ff;
+}

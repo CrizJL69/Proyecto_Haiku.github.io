@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto_Haiku Ramen</title>
+    
+    <!-- Enlace a tu Bootstrap local -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="fondo-pagina"></div>
+    
+    <nav class="navbar-top">
+        <div class="logo-circulo">
+            <a href="sobrenosotros.html" class="logo-enlace">
+                <img src="imagenes/logo.jpg" alt="mi logo" class="imagen-logo">
+            </a>
+        </div>
+        <div class="menu-wrapper">
+            <label class="hamburger">
+                <input type="checkbox" id="btn-menu">
+                <svg viewBox="0 0 32 32">
+                    <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+                    <path class="line" d="M7 16 27 16"></path>
+                </svg>
+            </label>
+            <div class="menu-lateral">
+                <button class="menu-btn" onclick="location.href='index.html'">Inicio</button>
+                <button class="menu-btn" onclick="location.href='sobrenosotros.html'">Sobre nosotros</button>
+                <button class="menu-btn" onclick="location.href='nuestromenu.html'">Nuestro Menú</button>
+                <button class="menu-btn" onclick="location.href='encuentranos.html'">Encuentranos</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Usamos el 'container' de Bootstrap para dar responsividad a los márgenes -->
+    <main class="contenido-principal container">
+        
+        <h1 class="titulo-principal">HAIKU RAMEN</h1>
+        
+        <div class="divisor-especialidades">
+            <span class="linea-decorativa"></span>
+            <h2 class="texto-especialidades">ESPECIALIDADES DEL DÍA</h2>
+            <span class="linea-decorativa"></span>
+        </div>
+        
+        <div class="carrusel-interactivo">
+            <input type="radio" name="slide" id="slide1" checked>
+            <input type="radio" name="slide" id="slide2">
+            <input type="radio" name="slide" id="slide3">
+            <div class="imagenes-contenedor">
+                <div class="slide s1">
+                    <img src="imagenes/menu3.jpg" alt="Plato 1" class="img-main">
+                </div>
+                <div class="slide s2">
+                    <img src="imagenes/menu2.jpg" alt="Plato 2" class="img-main">
+                </div>
+                <div class="slide s3">
+                    <img src="imagenes/menu.jpg" alt="Plato 3" class="img-main">
+                </div>
+            </div>
+            <div class="flechas">
+                <label for="slide3" class="flecha flecha-izq" id="f-izq-1">❮</label>
+                <label for="slide2" class="flecha flecha-der" id="f-der-1">❯</label>
+                <label for="slide1" class="flecha flecha-izq" id="f-izq-2">❮</label>
+                <label for="slide3" class="flecha flecha-der" id="f-der-2">❯</label>
+                <label for="slide2" class="flecha flecha-izq" id="f-izq-3">❮</label>
+                <label for="slide1" class="flecha flecha-der" id="f-der-3">❯</label>
+            </div>
+            
+            <div class="caja-descripcion-dinamica">
+                <p class="desc d1">MOCHI: Postre japones de masa elastica de arros glutinoso y relleno de crema de distintos sabores !No te lo pierdas¡</p>
+                <p class="desc d2">EBI FURAI: Camarones empanizados super crujientes de cortecia</p>
+                <p class="desc d3">EBI FURAI RAMEN: Tazon de ramen, tiene fideos veduras, maiz, tomates cherry y zanahoria cortada en forma de flor 2x1 solo por hoy.</p>
+            </div>
+        </div>
+        
+        <section class="seccion-instrucciones">
+            <h4 class="pregunta-estilo">¿Cómo se come al estilo japonés?</h4>
+            <div class="pasos-interactivos">
+                <input type="radio" name="paso" id="paso1" checked>
+                <input type="radio" name="paso" id="paso2">
+                <input type="radio" name="paso" id="paso3">
+                <input type="radio" name="paso" id="paso4">
+                <div class="linea-puntos">
+                    <label for="paso1" class="punto-label"></label>
+                    <div class="conector"></div>
+                    <label for="paso2" class="punto-label"></label>
+                    <div class="conector"></div>
+                    <label for="paso3" class="punto-label"></label>
+                    <div class="conector"></div>
+                    <label for="paso4" class="punto-label"></label>
+                </div>
+                <div class="texto-instruccion-deslizable">
+                    <p class="inst i1">1.PRUEBA EL CALDO PRIMERO: Antes de tocar los fideos, toma un par cucharadas del caldo puro. Asi aprecias el alma del plato y el sabor base en su estado originas.</p>
+                    <p class="inst i2">2.¡SORBE SIN PENA!: ​Agarra los fideos con los palillos y sórbelos haciendo ruido. Esto hace que entre aire, enfriando los fideos al instante e intensificando los sabores..</p>
+                    <p class="inst i3">3.INTERCALA Y COME RAPIDO: ​Ve alternando los fideos con los diferentes ingredientes del tazón. Consúmelo en menos de 15 minutos para evitar que los fideos absorban demasiado líquido y se batan..</p>
+                    <p class="inst i4">4.DIRECTO AL TAZON: ​Al terminar los fideos, levanta el plato con ambas manos y tómate el caldo restante directo del borde. ¡Es el mayor cumplido para el chef!.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Script de Bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
